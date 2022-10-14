@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-/*
- main - is the entry point
- always return 0 to mark the end of the program
+/**
+ *main - is the entry point
+ *always return 0 to mark the end of the program
  */
 int main(void)
 {
