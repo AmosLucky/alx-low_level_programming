@@ -1,30 +1,34 @@
 #include <stdio.h>
 
 /**
-* main - Print combinations of two digit numbers
-*
-* Return: Always 0 (Success)
+ * main - Writes 00 - 99
+ * @void: Empty parameter list for main.
+ *
+ * Description: Writes all unique combinations
+ * of 2 numbers
+ *
+ * Return: 0 for success
 */
 int main(void)
 {
-  int tens;
-  int ones;
+	int i, j;
 
-  for (tens = 0; tens <= 9; tens++)
-    {
-      for (ones = tens + 1; ones <= 9; ones++)
+	for (i = '0'; i <= '9'; i++)
 	{
-	  putchar(tens + '0');
-	  putchar(ones + '0');
-
-	  if (tens < 8)
-	    {
-	      putchar(',');
-	      putchar(' ');
-	    }
+		for (j = '0'; j <= '9'; j++)
+		{
+			if ((i < j) & (j <= '9'))
+			{
+				putchar(i);
+				putchar(j);
+				if ((j < '9') | (i < '8'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
 	}
-    }
-  putchar('\n');
-
-  return (0);
+	putchar('\n');
+	return (0);
 }
