@@ -1,11 +1,12 @@
-#includ <stdio.h>
+#includ <main.h>
+#include <unistd.h>
 /*
- * main - prints _putchar, followed by a new line.
- * Return: alwas 0
+ * _putchar - writes the char c tostdout.
+ * Return: success 1, error -1
+ *
  */
 
-int main(void)
+int _putchar(char c)
 {
-	printf("_putchar");
-	return (0);
+	return (write(1, &c, 1));
 }
