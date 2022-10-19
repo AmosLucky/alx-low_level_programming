@@ -1,18 +1,20 @@
 #include "main.h"
 
+
 /**
- * _isalpha - checks letter
- * 
- * Return: 1 if c is lowercase
- */
+ * _isalpha - returns 1 if c is a letter
+ *
+ * @c: character to be checked if alpha
+ *
+ * Return: 1 if letter, 0 otherwise
+ **/
+
 int _isalpha(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-	{
+	if ((c <= 90) && (c >= 65))
 		return (1);
-	}
+	else if ((c >= 97) && (c <= 122))
+		return (1);
 	else
-	{
 		return (0);
-	}
 }
