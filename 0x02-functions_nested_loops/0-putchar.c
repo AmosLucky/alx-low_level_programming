@@ -1,4 +1,4 @@
-#includ <main.h>
+#include <main.h>
 #include <unistd.h>
 /*
  * _putchar - writes the char c tostdout.
