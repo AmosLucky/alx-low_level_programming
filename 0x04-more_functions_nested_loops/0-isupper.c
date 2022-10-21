@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _isupper - Have a _isupper function, used to check if char is upper
- *
- * Return: 0 if char is not upper and 1 if char is upper
+ *_isupper - Have a _isupper function, used to check if char is upper
+ *@c: caracter recibo por main.
+ *Return: 0 if char is not upper and 1 if char is upper
  */
 int _isupper(int c)
 {
