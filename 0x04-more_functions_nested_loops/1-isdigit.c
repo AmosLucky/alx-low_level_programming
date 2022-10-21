@@ -1,8 +1,7 @@
 #include "main.h"
-
 /**
  * _isdigit - checks for lowercase character.
- * @c: caracter recibo por main.
+ * @c: character to enter.
  * Return: 1 if c is uppercase
  */
 int _isdigit(int c)
@@ -11,11 +10,6 @@ int _isdigit(int c)
 	{
 		return (1);
 	}
-	else
-	{
-		return (0);
-	}
-}	}
 	else
 	{
 		return (0);
