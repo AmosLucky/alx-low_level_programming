@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * _isupper - Have a _isupper function, used to check if char is upper
  *
