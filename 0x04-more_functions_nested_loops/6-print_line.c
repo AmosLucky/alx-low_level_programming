@@ -1,20 +1,18 @@
+
 #include "main.h"
 
 /**
- * ptint_line - pient strait line between tow points
- *
+ * print_line - print a line
+ * @n: length of line
  * Return: nothing
- */
+ **/
+
 void print_line(int n)
 {
-	if (n > 0)
+	while(n >= 1)
 	{
-		int i = 0;
-		while (n > i)
-		{
-			_putchar('_');
-			i++;
-		}
+		_putchar('_');
+		n--;
 	}
 	_putchar('\n');
 }
