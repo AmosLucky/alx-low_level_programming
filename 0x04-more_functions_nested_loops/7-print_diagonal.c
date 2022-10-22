@@ -1,12 +1,10 @@
 #include "main.h"
-
 /**
- * print_diagonal - prints a diagonal line in terminal
- *
- * @n input number
- *
+ * print_diagonal - prints diagonal line
+ * @n: length of line
  * Return: nothing
  **/
+
 void print_diagonal(int n)
 {
 	int x, y;
