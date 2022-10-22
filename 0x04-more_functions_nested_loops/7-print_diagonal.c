@@ -7,7 +7,7 @@
  *
  * Return: nothing
  **/
-print_diagonal(int n)
+void print_diagonal(int n)
 {
 	int x, y;
 	for(y = 1; y <= n; y++)
