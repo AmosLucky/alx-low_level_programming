@@ -1,10 +1,13 @@
 #include "main.h"
 /**
- * puts2 -  prints every other character of a string, 
- * @str: input char param
- * Description:  prints every other character of a string, 
- * Return: nothing
+ * puts2 - main function.
+ * @str: Pointer, the string to print.
+ *
+ * Description: This function prints every other character of a string
+ * (divisible by two)
+ * Return: none.
  */
+
 void puts2(char *str)
 {
 	int i;
