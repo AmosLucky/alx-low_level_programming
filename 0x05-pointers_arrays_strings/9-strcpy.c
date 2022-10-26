@@ -7,20 +7,15 @@
  * Description: Write a function that copies the string pointed 
  * Return: nothing
  */
-
 char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
-	int j = 0;
+	int i;
 
-	while (src[i])
+	for (i = 0; src[i]; i++)
 	{
-		i++;
+		dest[i] = src[i];
 	}
-	while (j <= i)
-	{
-		dest[j] = src[j];
-		j++;
-	}
+	dest[i] = '\0';
+
 	return (dest);
 }
