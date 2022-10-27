@@ -16,20 +16,16 @@ int _strcmp(char *s1, char *s2)
 	{
 		i++;
 	}
+
 	while (s2[j])
 	{
 		j++;
 	}
+
 	if (i > j)
-	{
 		return (1);
-	}
-	else if (j > i)
-	{
+	else if (j >i)
 		return (-1);
-	}
 	else
-	{
 		return (0);
-	}
 }
