@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
 * *_strncpy - function that compares two strings.
 * @dest : output string
