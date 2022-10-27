@@ -1,12 +1,11 @@
-#include "main.h"
+#include "holberton.h"
 /**
- * _strncpy -  function that copies a string.
- * @dest: destination string
- * @src: input string 
- * @n: number of string to be copied
- * Description: function that copies a string
- * Return: char
- */
+* *_strncpy - function that compares two strings.
+* @dest : output string
+* @src : input string
+* @n : int
+* Return: char.
+*/
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0;
