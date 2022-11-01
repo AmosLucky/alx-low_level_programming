@@ -5,8 +5,9 @@
  * @s: input char array
  * @c: char to be located
  * Description: function that locates a character in a string.
- * Return: char or NULL
+ * Return: char
  */
+
 char *_strchr(char *s, char c)
 {
 	int i = 0;
