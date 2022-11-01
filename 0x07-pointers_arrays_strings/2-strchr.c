@@ -10,17 +10,16 @@
  * Return: a pointer to the first occurrence of the character c
  * in the string s, or NULL if the character is not found.
  */
+
 char *_strchr(char *s, char c)
 {
-	int i = 0;
-
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == c)
+		if (*s == c)
 		{
-			return (s + i);
+			return (s);
 		}
-		i++;
+		s++;
 	}
-	return (NULL);
+	return (!c ? s : NULL);
 }
