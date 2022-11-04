@@ -8,7 +8,7 @@
  * Description: The program prints the number of args passed
  * Return: 0
  */
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	printf("%d\n", argc);
 	return (0);
