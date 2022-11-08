@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * argstostr - concatenates all arguements to the program
+ * *argstostr - concatenates all arguements to the program
  * @ac: arguement count
  * @av: pointer to arguements
  * Return: pointer to new space in memory or null
@@ -27,6 +27,7 @@ char *argstostr(int ac, char **av)
  * new line for each word
  */
 	strDup = malloc(sizeof(char) * size);
+
 	if (strDup == NULL)
 		return (NULL);
 	k = 0;
