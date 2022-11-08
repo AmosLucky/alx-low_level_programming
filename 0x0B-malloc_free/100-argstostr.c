@@ -5,7 +5,7 @@
  * @ac: arguement count
  * @av: pointer to arguements
  * Return: pointer to new space in memory or null
- */
+ **/
 char *argstostr(int ac, char **av)
 {
 	char *strDup;
@@ -22,12 +22,10 @@ char *argstostr(int ac, char **av)
 		size++;
 	}
 	size++;
-/**
- * allocate memory for total number of chars and
+/* allocate memory for total number of chars and
  * new line for each word
  */
 	strDup = malloc(sizeof(char) * size);
-
 	if (strDup == NULL)
 		return (NULL);
 	k = 0;
