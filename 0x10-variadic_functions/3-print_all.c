@@ -1,67 +1,81 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "variadic_functions.h"
-
-void i_print(va_list i)
+/**
+ * print_c - Prints char
+ * @list: arguments
+ * Return: void
+ */
+void print_c(va_list list)
 {
-	printf("%d", va_arg(i, int);
+	printf("%c", (char)va_arg(list, int));
 }
-
-void c_print(va_list i)
+/**
+ * print_d - Prints digit
+ * @list: arguments
+ * Return: void
+ */
+void print_d(va_list list)
 {
-	printf("%c", va_arg(i, char);
+	printf("%d", va_arg(list, int));
 }
-
-void f_print(va_list i)
+/**
+ * print_f - Prints float
+ * @list: arguments
+ * Return: void
+ */
+void print_f(va_list list)
 {
-	printf("%f", va_arg(i, float);
+	printf("%f", (float)va_arg(list, double));
 }
-
-void s_print(va_list i)
+/**
+ * print_str - Prints str
+ * @list: arguments
+ * Return: void
+ */
+void print_s(va_list list)
 {
-	if (va_arg(i, char *) == NULL)
-		printf("(nil");
-	else
-		printf("%s", va_arg(i, char *);
-}
+	char *str = va_arg(list, char *);
 
-typedef struct print
-{
-	char var;
-	void (*func)(va_list);
-}print_t;
-
-void print_one(char a, va_list ap)
-{
-	int i;
-	print_t list[] = {
-		{'c', i_print},
-		{'i', c_print},
-		{'f', f_print},
-		{'s', s_print},
-		{NULL, NULL},
-	};
-
-	i = 0;
-	while (i < 4)
+	if (str)
 	{
-		if (a = list.var[i])
-			list.func[i](ap);
-		i++;
+		printf("%s", str);
+		return;
 	}
+	printf("(nil)");
 }
-
 
 /**
- * print_all - print any type
- * @format - type of variable to print
+ * print_all - Prints anything
+ * @format: format to print
  * Return: void
- **/
+ */
 void print_all(const char * const format, ...)
 {
-	int i;
+	va_list list;
+	char *separator = "";
+	int i = 0, j;
 
-	i = 0;
-	while (i < for
+	filter filt[] = {
+	    {'c', print_c},
+	    {'i', print_d},
+	    {'f', print_f},
+	    {'s', print_s}
+	};
+	va_start(list, format);
+	while (format && format[i])
+	{
+		j = 0;
+		while (j < 4)
+		{
+			if (format[i] == filt[j].fmt)
+			{
+				printf("%s", separator);
+				filt[j].f(list);
+				separator = ", ";
+			}
+			j++;
+		}
+		i++;
+	}
+	printf("\n");
+	va_end(list);
 }
