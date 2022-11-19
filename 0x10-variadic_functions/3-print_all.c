@@ -1,81 +1,67 @@
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "variadic_functions.h"
-/**
- * print_c - Prints char
- * @list: arguments
- * Return: void
- */
-void print_c(va_list list)
-{
-	printf("%c", (char)va_arg(list, int));
-}
-/**
- * print_d - Prints digit
- * @list: arguments
- * Return: void
- */
-void print_d(va_list list)
-{
-	printf("%d", va_arg(list, int));
-}
-/**
- * print_f - Prints float
- * @list: arguments
- * Return: void
- */
-void print_f(va_list list)
-{
-	printf("%f", (float)va_arg(list, double));
-}
-/**
- * print_str - Prints str
- * @list: arguments
- * Return: void
- */
-void print_s(va_list list)
-{
-	char *str = va_arg(list, char *);
 
-	if (str)
-	{
-		printf("%s", str);
-		return;
-	}
-	printf("(nil)");
+void i_print(va_list i)
+{
+	printf("%d", va_arg(i, int);
 }
 
-/**
- * print_all - Prints anything
- * @format: format to print
- * Return: void
- */
-void print_all(const char * const format, ...)
+void c_print(va_list i)
 {
-	va_list list;
-	char *separator = "";
-	int i = 0, j;
+	printf("%c", va_arg(i, char);
+}
 
-	filter filt[] = {
-	    {'c', print_c},
-	    {'i', print_d},
-	    {'f', print_f},
-	    {'s', print_s}
+void f_print(va_list i)
+{
+	printf("%f", va_arg(i, float);
+}
+
+void s_print(va_list i)
+{
+	if (va_arg(i, char *) == NULL)
+		printf("(nil");
+	else
+		printf("%s", va_arg(i, char *);
+}
+
+typedef struct print
+{
+	char var;
+	void (*func)(va_list);
+}print_t;
+
+void print_one(char a, va_list ap)
+{
+	int i;
+	print_t list[] = {
+		{'c', i_print},
+		{'i', c_print},
+		{'f', f_print},
+		{'s', s_print},
+		{NULL, NULL},
 	};
-	va_start(list, format);
-	while (format && format[i])
+
+	i = 0;
+	while (i < 4)
 	{
-		j = 0;
-		while (j < 4)
-		{
-			if (format[i] == filt[j].fmt)
-			{
-				printf("%s", separator);
-				filt[j].f(list);
-				separator = ", ";
-			}
-			j++;
-		}
+		if (a = list.var[i])
+			list.func[i](ap);
 		i++;
 	}
-	printf("\n");
-	va_end(list);
+}
+
+
+/**
+ * print_all - print any type
+ * @format - type of variable to print
+ * Return: void
+ **/
+void print_all(const char * const format, ...)
+{
+	int i;
+
+	i = 0;
+	while (i < for
 }
