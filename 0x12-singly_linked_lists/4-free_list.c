@@ -4,6 +4,7 @@
 /**
  * free_list - frees a linked list
  * @head: the beginning of the list
+ * Return: nothingt
  */
 void free_list(list_t *head)
 {
